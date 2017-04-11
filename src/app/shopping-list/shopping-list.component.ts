@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
 })
-export class ShoppingListComponent implements OnInit {
+
+export class ShoppingListComponent  {
   ingredients: Ingredient[] = [
     new Ingredient('Apple', 10),
     new Ingredient('Tomatoes', 10),
     new Ingredient('Pears', 10)
   ];
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+ onIngredientAdded(ingredient: Ingredient){
+   this.ingredients.push(ingredient);
+ }
 
 }
