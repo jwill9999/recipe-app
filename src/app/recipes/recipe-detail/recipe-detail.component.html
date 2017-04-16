@@ -15,9 +15,9 @@
               Manage Recipes <span class="caret"></span>
             </button>
             <ul class="dropdown-menu ">
-                <li (click)='addToShoppingList($event)'><a href="#">Add Ingredients to shopping List</a></li>
-                <li><a href="#">Edit Recipe</a></li>
-                <li><a href="#">delete Recipe</a></li>
+                <li (click)='addToShoppingList()' style="cursor:  pointer"><a>Add Ingredients to shopping List</a></li>
+                <li routerLink="edit" style="cursor:  pointer"><a>Edit Recipe</a></li>
+                <li style="cursor:  pointer"><a>delete Recipe</a></li>
             </ul>
         </div>
     </div>

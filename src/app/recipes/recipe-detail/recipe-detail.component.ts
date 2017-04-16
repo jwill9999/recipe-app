@@ -1,9 +1,12 @@
+import { Params, ActivatedRoute } from '@angular/router';
+
+import { RecipeService } from './../../services/recipe.service';
 
 import { Ingredient } from './../../shared/ingredient.model';
 
 import { ShoppinglistService } from './../../services/shoppinglist.service';
 import { Recipe } from './../recipe.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -11,19 +14,27 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent  {
-  ingredients;
-constructor(public shoppingListService: ShoppinglistService){
 
-}
-name;
-@Input() recipe: Recipe;
+  recipe: Recipe;
+  id: number;
 
 
-addToShoppingList() {
-  for (let i of this.recipe.ingredients) {
-    this.shoppingListService.addIngredients(i)
+  constructor(public shoppingListService: ShoppinglistService, private route: ActivatedRoute, private individualRecipe: RecipeService) { }
+
+  ngOnInit() {
+    const id = this.route.params.subscribe((params: Params) => {
+      this.id = +params['id'];
+      this.recipe = this.individualRecipe.getRecipe(this.id)
+    })
   }
+  addToShoppingList() {
+      this.recipe.ingredients.forEach(ingredient => {
+        this.shoppingListService.addIngredients(ingredient)
+      })
+  }
+
 }
-}
+
+
 
 
