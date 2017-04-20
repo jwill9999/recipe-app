@@ -1,5 +1,5 @@
 import { ShoppinglistService } from './../services/shoppinglist.service';
-import { Ingredient } from './../shared/ingredient.model';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,6 +14,11 @@ export class ShoppingListComponent  {
 
  constructor(private shoppingListService: ShoppinglistService){}
 
+  editItem(index : number){
+
+  this.shoppingListService.startedEditing.next(index);
+
+  }
 
 
 
