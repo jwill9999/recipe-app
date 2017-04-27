@@ -1,4 +1,4 @@
-<a routerLinkActive="active" [routerLink]="[i]" class="list-group-item clearfix" style="cursor: pointer">
+<!--<a routerLinkActive="active" [routerLink]="[i]" class="list-group-item clearfix margin" style="cursor: pointer">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{recipe.name}}</h4>
         <p class="list-group-item-text">{{recipe.description}}</p>
@@ -6,4 +6,31 @@
     <span class="pull-right">
           <img [src]="recipe.imagePath" alt="" class="img-responsive" style="max-height: 80px;">
         </span>
+</a>-->
+
+<!--
+<a routerLinkActive="active" [routerLink]="[i]" class="list-group-item clearfix margin" style="cursor: pointer">
+
+<div className="row">
+  <div className="col-sm-7">
+    <span>{{recipe.name}}</span><br>
+    <span>{{recipe.description}}</span>
+  </div>
+  <div className="col-sm-5" >
+    <img [src]="recipe.imagePath" alt="" className="img-responsive" style="max-width: 100%;">
+  </div>
+  </div>
+
+</a>-->
+
+<a id="list" routerLinkActive="active" [routerLink]="[i]" class="list-group-item clearfix margin" style="cursor: pointer">
+<div  class="media">
+  <div class="media-left media-middle">
+      <img [src]="recipe.imagePath" alt="" class="media-object" style="max-width: 150px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{recipe.name}}</h4>
+    {{recipe.description}}
+  </div>
+</div>
 </a>
