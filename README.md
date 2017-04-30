@@ -1,4 +1,62 @@
+# Angular 4 Application Recipe Book
+
+```
+
+> git clone https://github.com/jwill9999/recipe-app.git
+> cd recipe-app
+> npm install
+> ng serve
+```
+
+## Project View
+
+![](./src/assets/images/recipebook.png)
+
+
+
 # RecipeApp
+
+A comprehensive Angular application covering all of the Angular 4 updates. The project focuses on the key features and skills required to successfully implement a modern angular application. The code is commented for easy reference and links below provide additional resources. Fully functional CRUD operations with http access using RxJs observables.
+
+## Key features
+
+> Components
+
+> Services
+
+> Forms both Reactive and Template
+
+> Http requests
+
+> Routing ActivatedRoutes and Params
+
+> Input and Output decorators
+
+> CRUD
+
+> Models
+
+> Creating a directive  
+
+... to name a few 
+
+
+## Links
+
+[Angular Docs](https://angular.io/)
+
+[Angular API Reference](https://angular.io/docs/ts/latest/api/)
+
+[CLI Quickstart Template](https://angular.io/docs/ts/latest/cli-quickstart.html)
+
+[Routing](https://angular.io/docs/ts/latest/guide/router.html)
+
+[Pipes](https://angular.io/docs/ts/latest/guide/pipes.html)
+
+[Deployment](https://angular.io/docs/ts/latest/guide/deployment.html)
+
+
+[Recommended Angular 4 tutorial Maximilian Schwarzmüller](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/content)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
