@@ -22,26 +22,41 @@ export class RecipeService {
      'Sausage Casserole with onion gravy',
      'http://d3udvtnhu4gqbm.cloudfront.net/wp-content/uploads/Italian-Sausage.jpg',
      [new Ingredient('Sausages', 6), new Ingredient('onions', 2)]
+   ),
+    new Recipe(
+     'Taco Meat Recipe',
+     'Taco with minced beef and onion',
+     'http://cdn.skim.gs/images/efdcvsbnlily8s1damfz/taco-meat-leftovers-recipes',
+     [new Ingredient('Minced Beef', 2), new Ingredient('onions', 2)]
+   ),
+    new Recipe(
+     'Egg delight',
+     'Lightly toasted wraps with fresh eggs',
+     'http://cdn.skim.gs/images/v1/msi/ivenjnophdgmridughl3/dinner-recipes-under-300-calories',
+     [new Ingredient('Eggs', 6), new Ingredient('Wraps', 2), new Ingredient('Cheese', 1)]
+   ),
+    new Recipe(
+     'Fried EggPlant',
+     'Eggplant daked with cheese',
+     'https://i.ytimg.com/vi/VGSc5WIljb0/maxresdefault.jpg',
+     [new Ingredient('Aubergine', 6), new Ingredient('Cheese', 2)]
    )
  ];
 
 
-//gets recipes and returns them
+ //gets recipes and returns them
  getRecipes() {
    return this.recipes.slice()
  }
 
  removeRecipe(id: number) {
-
    this.recipes.splice(id, 1);
    this.recipesChanged.next(this.recipes.slice());
-
  }
 
  //finds a recipe by id
  getRecipe(index: number) {
    return this.recipes[index]
-
  }
 
 
