@@ -1,3 +1,4 @@
+import { DataStorageService } from './services/data-storage.service';
 import { RecipeListTemplateComponent } from './recipes/recipe-list/recipe-item/recipe-list-template/recipe-list-template.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeService } from './services/recipe.service';
@@ -42,7 +43,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppinglistService , RecipeService],
+  providers: [ShoppinglistService , RecipeService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
