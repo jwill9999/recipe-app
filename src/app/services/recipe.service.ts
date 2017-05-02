@@ -1,3 +1,4 @@
+
 import { Subject } from 'rxjs/Subject';
 import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from '../recipes/recipe.model'
@@ -43,6 +44,10 @@ export class RecipeService {
    )
  ];
 
+setRecipes(recipes: Recipe[]){
+  this.recipes = recipes;
+  this.recipesChanged.next(this.recipes.slice())
+}
 
  //gets recipes and returns them
  getRecipes() {
