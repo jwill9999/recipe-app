@@ -85,15 +85,18 @@ export class RecipeEditComponent implements OnInit {
 
 // adds altered or new recipe to recipe array
   onSubmit() {
+
     const newRecipe = new Recipe(this.recipeEditForm.value['name'], this.recipeEditForm.value['description'], this.recipeEditForm.value['imagePath'], this.recipeEditForm.value['ingredients'])
 
     if (!this.newForm) {
-      console.log('edit mode still')
+
       this.recipeService.upDateRecipe(this.id, newRecipe);
+       this.router.navigate(['/recipes', this.id]);
     } else {
       this.recipeService.addRecipe(newRecipe);
+      this.router.navigate(['/recipes'])
     }
-    this.router.navigate(['/recipes', this.id]);
+
   };
 
 

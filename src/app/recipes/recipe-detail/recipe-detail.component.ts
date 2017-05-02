@@ -24,16 +24,14 @@ export class RecipeDetailComponent {
     const id = this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.recipe = this.recipeService.getRecipe(this.id)
-
+    })
 
     // listen and subscribe to recipe changes and update through observable
       this.recipeService.recipesChanged.subscribe(
         (recipe: Recipe[]) => {
-
           this.recipe = recipe[this.id]
         })
-    })
-  }
+   }
 
  //add ingredients to shopping list
   addToShoppingList() {

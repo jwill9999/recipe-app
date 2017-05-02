@@ -47,7 +47,7 @@ export class RecipeService {
 
  // adds a new recipe
  addRecipe(recipe: Recipe) {
-   this.recipes.push(recipe)
+   this.recipes.push(recipe);
    this.recipesChanged.next(this.recipes.slice());
  }
 
