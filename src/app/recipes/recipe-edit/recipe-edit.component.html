@@ -6,7 +6,7 @@
   </div>
   <div class="col-xs-12">
     <form [formGroup]="recipeEditForm" (ngSubmit)="onSubmit()">
-    <div class="col-xs-3 pull-right ">
+    <div class="col-xs-4 col-md-6 col-lg-3 pull-right ">
        <button [disabled]='!recipeEditForm.valid' type="submit" class="btn btn-primary">Save</button>
        <button (click)="onCancel()"  type="button" class="btn btn-warning">Cancel</button>
    </div>
@@ -61,7 +61,7 @@
               <input class="form-control" type="number" formControlName="amount">
             </div>
             <div class="col-xs-2 margin">
-              <button type="button" class="btn btn-danger" (click)="deleteIngredient()"  >Delete</button>
+              <button type="button" class="btn btn-danger" (click)="deleteIngredient(i)">Delete</button>
             </div>
           </div>
         </div>

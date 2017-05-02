@@ -52,10 +52,7 @@ export class RecipeEditComponent implements OnInit {
             })
           )
         }
-
       }
-
-
     }
 
   // Form set up Reactive
@@ -99,8 +96,8 @@ export class RecipeEditComponent implements OnInit {
 
   };
 
-  deleteIngredient(){
-
+  deleteIngredient(index: number){
+     (<FormArray> this.recipeEditForm.get('ingredients')).removeAt(index);
   }
 
 

@@ -1,3 +1,4 @@
+import { DataStorageService } from './data-storage.service';
 
 import { Subject } from 'rxjs/Subject';
 import { Ingredient } from '../shared/ingredient.model';
@@ -10,6 +11,8 @@ export class RecipeService {
 
 
   constructor() { }
+
+
 
  private recipes: Recipe[] = [
    new Recipe(
@@ -70,6 +73,8 @@ setRecipes(recipes: Recipe[]){
    this.recipes.push(recipe);
    this.recipesChanged.next(this.recipes.slice());
  }
+
+
 
 
  // updates existing altered recipe
