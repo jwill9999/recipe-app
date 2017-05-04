@@ -1,3 +1,5 @@
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeListTemplateComponent } from './recipes/recipe-list/recipe-item/recipe-list-template/recipe-list-template.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
@@ -22,6 +24,12 @@ const appRouter: Routes = [
   },
   {
     path: "shopping-list", component: ShoppingListComponent
+  },
+  {
+    path: "register", component: RegisterComponent
+  },
+   {
+    path: "login", component: LoginComponent
   }
 ]
 
