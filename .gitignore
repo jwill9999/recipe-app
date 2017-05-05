@@ -38,7 +38,7 @@ testem.log
 /e2e/*.map
 
 # configurations
-.configuration.js
+.configuration
 
 # System Files
 .DS_Store
