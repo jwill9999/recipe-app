@@ -1,0 +1,23 @@
+<div class="container margin-top">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div [class.hidden]="!this.auth.error" class="alert alert-danger" role="alert">{{this.auth.errorMessage}}</div>
+      <form (ngSubmit)="onLogin(f)" #f="ngForm">
+        <legend>Login</legend>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Email" ngModel email #email="ngModel">
+          <div class="warning-text" *ngIf="!email.valid && email.touched ">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" ngModel required minlength="6" #password="ngModel">
+          <div class="warning-text" *ngIf="!password.valid && password.touched">Minimum letters or numbers 6</div>
+        </div>
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login</button>
+        <a id="newUser" [routerLink]="['/register']">Register as New User</a>
+      </form>
+    </div>
+  </div>
+</div>
+

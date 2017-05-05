@@ -1,0 +1,16 @@
+.margin-top {
+  margin-top: 30px;
+}
+
+.warning-text {
+  color: red;
+  padding-top: 6px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+#newUser {
+  margin-left: 20px;
+}
