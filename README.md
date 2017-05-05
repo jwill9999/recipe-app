@@ -22,17 +22,27 @@ A comprehensive Angular application covering all of the Angular 4 updates. The p
 
 > Components
 
+> AuthGuards
+
+> Firebase Authentication
+
+> Personalisation
+
 > Services
 
 > Forms both Reactive and Template
 
 > Http requests
 
+> Observables 
+
 > Routing ActivatedRoutes and Params
 
 > Input and Output decorators
 
-> CRUD
+> CRUD operations to recipes and shopping list
+
+> Database intergration
 
 > Models
 
@@ -58,7 +68,9 @@ A comprehensive Angular application covering all of the Angular 4 updates. The p
 
 [Recommended Angular 4 tutorial Maximilian Schwarzmüller](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/content)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
+
+<hr>
 
 ## Development server
 
