@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { RecipeService } from './../../services/recipe.service';
 import { Recipe } from './../recipe.model';
 import { Component, OnInit, Output } from '@angular/core';
@@ -13,7 +14,7 @@ export class RecipeListComponent implements OnInit {
  recipes: Recipe[] = [];
 
 
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService, private auth: AuthService) { }
 
   ngOnInit() {
     this.recipeService.recipesChanged.subscribe(

@@ -11,13 +11,13 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="btn-group" appDropdown>
-            <button type="button" class="btn btn-primary dropdown-toggle ">
+            <button [disabled]="!this.auth.isAuthenticated()" type="button" class="btn btn-primary dropdown-toggle ">
               Manage Recipes <span class="caret"></span>
             </button>
             <ul class="dropdown-menu ">
-                <li (click)='addToShoppingList()' style="cursor:  pointer"><a>Add Ingredients to shopping List</a></li>
-                <li routerLink="edit" style="cursor:  pointer"><a>Edit Recipe</a></li>
-                <li (click)="onDeleteRecipe()"  style="cursor:  pointer"><a>delete Recipe</a></li>
+                <li   (click)='addToShoppingList()' style="cursor:  pointer"><a>Add Ingredients to shopping List</a></li>
+                <li  routerLink="edit" style="cursor:  pointer"><a>Edit Recipe</a></li>
+                <li  (click)="onDeleteRecipe()"  style="cursor:  pointer"><a>delete Recipe</a></li>
             </ul>
         </div>
     </div>

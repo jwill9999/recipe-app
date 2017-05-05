@@ -17,10 +17,10 @@
                 <li [class.hide]="!this.auth.loggedIn" routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li routerLinkActive="active"><a [routerLink]="['/register']" [class.hide]="this.auth.loggedIn">Register</a></li>
+
                 <li routerLinkActive="active"><a [routerLink]="['/login']" [class.hide]="this.auth.loggedIn">Login</a></li>
                 <li [class.hide]="!this.auth.loggedIn"><a >{{this.auth.email}}</a></li>
-                <li (click)="onLogout()" [class.hide]="!this.auth.loggedIn" routerLinkActive="active"><a >LogOut</a></li>
+                <li id="logout" (click)="onLogout()" [class.hide]="!this.auth.loggedIn"><a routerLinkActive="active">LogOut</a></li>
                 <li [class.hide]="!this.auth.loggedIn" class="dropdown" style="cursor: pointer" appDropdown>
                     <a class="dropdown-toggle"  data-toggle="dropdown">Save Data<b class="caret"></b></a>
                     <ul class="dropdown-menu">

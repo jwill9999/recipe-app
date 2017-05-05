@@ -1,3 +1,4 @@
+import { LogininRouteGuard } from './services/loginin-route.guard';
 import { AuthService } from './services/auth.service';
 import { DataStorageService } from './services/data-storage.service';
 import { RecipeListTemplateComponent } from './recipes/recipe-list/recipe-item/recipe-list-template/recipe-list-template.component';
@@ -52,7 +53,7 @@ import { RegisterComponent } from './auth/register/register.component'
     AppRoutingModule,
 
   ],
-  providers: [ShoppinglistService , RecipeService, DataStorageService, AuthService],
+  providers: [ShoppinglistService , RecipeService, DataStorageService, AuthService, LogininRouteGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

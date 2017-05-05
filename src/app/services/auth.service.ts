@@ -7,16 +7,16 @@ import {config} from '../../../.configuration';
 @Injectable()
 export class AuthService {
 
-  loggedIn: boolean = false;
-  displayName: string;
-  email: string;
-  emailVerified: boolean;
-  photoURL: string;
-  isAnonymous: string;
-  uid: string;
-  providerData: string;
-  errorMessage: string;
-  error: boolean;
+  private loggedIn: boolean = false;
+  private displayName: string;
+  private email: string;
+  private emailVerified: boolean;
+  private photoURL: string;
+  private isAnonymous: string;
+  private uid: string;
+  private providerData: string;
+  private errorMessage: string;
+  private error: boolean;
 
   constructor(private router: Router) {
     firebase.initializeApp(config)
@@ -57,7 +57,7 @@ export class AuthService {
             this.router.navigate(['/recipes'])
           } else {
             this.loggedIn = false;
-            this.router.navigate(['/login'])
+            this.router.navigate(['/recipes'])
           }
         });
       })
@@ -74,5 +74,9 @@ export class AuthService {
         this.errorMessage = error.message;
         console.log(this.errorMessage);
       })
+  }
+
+  isAuthenticated(){
+      return this.loggedIn;
   }
 }

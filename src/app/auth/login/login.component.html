@@ -15,6 +15,7 @@
           <div class="warning-text" *ngIf="!password.valid && password.touched">Minimum letters or numbers 6</div>
         </div>
         <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login</button>
+        <a id="newUser" [routerLink]="['/register']">Register as New User</a>
       </form>
     </div>
   </div>

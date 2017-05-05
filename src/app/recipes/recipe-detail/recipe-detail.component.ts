@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Params, ActivatedRoute } from '@angular/router';
 import { RecipeService } from './../../services/recipe.service';
 import { Ingredient } from './../../shared/ingredient.model';
@@ -17,7 +18,7 @@ export class RecipeDetailComponent {
   id: number;
   length = this.recipeService.getRecipes().length;
 
-  constructor(public shoppingListService: ShoppinglistService, private route: ActivatedRoute, private recipeService: RecipeService) { }
+  constructor(public shoppingListService: ShoppinglistService, private route: ActivatedRoute, private recipeService: RecipeService, private auth: AuthService) { }
 
   ngOnInit() {
     //listen and get recipe from route params id
