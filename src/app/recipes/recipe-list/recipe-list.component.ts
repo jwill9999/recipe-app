@@ -11,24 +11,19 @@ import { Component, OnInit, Output } from '@angular/core';
 export class RecipeListComponent implements OnInit {
 
 
- recipes: Recipe[] = [];
+  recipes: Recipe[] = [];
 
 
   constructor(private recipeService: RecipeService, private auth: AuthService) { }
 
   ngOnInit() {
     this.recipeService.recipesChanged.subscribe(
-      (recipes : Recipe[]) => {
-
+      (recipes: Recipe[]) => {
         this.recipes = recipes
-
       }
     )
     this.recipes = this.recipeService.getRecipes()
-
-
-}
-
+  }
 
 }
 

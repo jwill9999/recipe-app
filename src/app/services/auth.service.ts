@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { Observable } from "rxjs/Observable";
-import {config} from '../../../.configuration';
+import { config } from '../../../.configuration';
 
 @Injectable()
 export class AuthService {
@@ -19,8 +19,7 @@ export class AuthService {
   private error: boolean;
 
   constructor(private router: Router) {
-    firebase.initializeApp(config)
-
+    firebase.initializeApp(config);
   }
 
 
@@ -64,7 +63,6 @@ export class AuthService {
       .catch((error) => {
         this.error = true;
         this.errorMessage = error.message;
-        console.log(this.errorMessage);
       });
   }
 
@@ -76,7 +74,8 @@ export class AuthService {
       })
   }
 
-  isAuthenticated(){
-      return this.loggedIn;
+  isAuthenticated() {
+    return this.loggedIn;
   }
+
 }

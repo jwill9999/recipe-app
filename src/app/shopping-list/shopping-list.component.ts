@@ -1,5 +1,4 @@
 import { ShoppinglistService } from './../services/shoppinglist.service';
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,16 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-list.component.css']
 })
 
-export class ShoppingListComponent  {
+export class ShoppingListComponent {
 
 
 
- constructor(private shoppingListService: ShoppinglistService){}
+  constructor(private shoppingListService: ShoppinglistService) { }
 
-  editItem(index : number){
-
-  this.shoppingListService.startedEditing.next(index);
-
+  editItem(index: number) {
+    this.shoppingListService.startedEditing.next(index);
   }
 
 

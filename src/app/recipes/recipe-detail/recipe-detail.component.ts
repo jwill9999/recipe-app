@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 
-export class RecipeDetailComponent {
+export class RecipeDetailComponent implements OnInit {
 
   recipe: Recipe;
   id: number;
@@ -23,18 +23,18 @@ export class RecipeDetailComponent {
   ngOnInit() {
     //listen and get recipe from route params id
     const id = this.route.params.subscribe((params: Params) => {
-      this.id = +params['id'];
-      this.recipe = this.recipeService.getRecipe(this.id)
+    this.id = +params['id'];
+    this.recipe = this.recipeService.getRecipe(this.id)
     })
 
     // listen and subscribe to recipe changes and update through observable
-      this.recipeService.recipesChanged.subscribe(
-        (recipe: Recipe[]) => {
-          this.recipe = recipe[this.id]
-        })
-   }
+    this.recipeService.recipesChanged.subscribe(
+      (recipe: Recipe[]) => {
+        this.recipe = recipe[this.id]
+      })
+  }
 
- //add ingredients to shopping list
+  //add ingredients to shopping list
   addToShoppingList() {
     this.recipe.ingredients.forEach(ingredient => {
       this.shoppingListService.addIngredients(ingredient)
@@ -43,9 +43,7 @@ export class RecipeDetailComponent {
 
   // delete a recipe
   onDeleteRecipe() {
-
     this.recipeService.removeRecipe(this.id)
-
   }
 
 }

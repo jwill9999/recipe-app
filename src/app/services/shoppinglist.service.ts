@@ -1,15 +1,13 @@
-
 import { Ingredient } from './../shared/ingredient.model';
 import { Injectable } from '@angular/core';
 import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class ShoppinglistService {
-    amountInput: any;
-    nameInput: any;
-    startedEditing = new Subject<number>();
+  amountInput: any;
+  nameInput: any;
+  startedEditing = new Subject<number>();
 
-  constructor() { }
 
   private ingredients: Ingredient[] = [
     new Ingredient('Apple', 10),
@@ -29,10 +27,9 @@ export class ShoppinglistService {
   editIngredient(index: number, item: Ingredient) {
     this.ingredients[index] = item;
   }
-  deleteIngredient(index: number){
+
+  deleteIngredient(index: number) {
     this.ingredients.splice(index, 1)
-
-
   }
 
 }

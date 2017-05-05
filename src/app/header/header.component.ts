@@ -1,6 +1,5 @@
 import { AuthService } from './../services/auth.service';
-//import * as firebase from 'firebase';
-import {Response} from '@angular/http';
+import { Response } from '@angular/http';
 import { DataStorageService } from './../services/data-storage.service';
 import { Component } from '@angular/core';
 
@@ -12,10 +11,7 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
 
-  constructor(private storage: DataStorageService, private auth: AuthService) {
-
-
-  }
+  constructor(private storage: DataStorageService, private auth: AuthService) { }
 
   onSaveData() {
     this.storage.storeRecipes()
@@ -25,9 +21,11 @@ export class HeaderComponent {
   }
 
   fetchData() {
-    this.storage.getRecipes()
+    this.storage.getRecipes();
   }
+
   onLogout() {
     this.auth.onLogout();
   }
+
 }

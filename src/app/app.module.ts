@@ -4,7 +4,6 @@ import { DataStorageService } from './services/data-storage.service';
 import { RecipeListTemplateComponent } from './recipes/recipe-list/recipe-item/recipe-list-template/recipe-list-template.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeService } from './services/recipe.service';
-
 import { ShoppinglistService } from './services/shoppinglist.service';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -53,7 +52,8 @@ import { RegisterComponent } from './auth/register/register.component'
     AppRoutingModule,
 
   ],
-  providers: [ShoppinglistService , RecipeService, DataStorageService, AuthService, LogininRouteGuard ],
+  providers: [ShoppinglistService, RecipeService, DataStorageService, AuthService, LogininRouteGuard],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

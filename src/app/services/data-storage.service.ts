@@ -1,31 +1,24 @@
-import {Recipe} from '../recipes/recipe.model';
+import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from './recipe.service';
-import { Injectable, OnInit } from '@angular/core';
-import {Response, Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Response, Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class DataStorageService implements OnInit {
+export class DataStorageService {
 
   recipesUrl: string = 'https://recipe-book-c81b8.firebaseio.com/recipes.json'
 
   constructor(private http: Http, private recipeService: RecipeService) {
     this.getRecipes();
-   }
+  }
 
-ngOnInit() {
-  //this.getRecipes();
-
-}
-
-
-  storeRecipes(){
-    return this.http.put( this.recipesUrl, this.recipeService.getRecipes());
+  storeRecipes() {
+    return this.http.put(this.recipesUrl, this.recipeService.getRecipes());
   }
 
 
-
-  getRecipes(){
+  getRecipes() {
     this.http.get('https://recipe-book-c81b8.firebaseio.com/recipes.json')
       .map(
       (response: Response) => {
@@ -37,15 +30,14 @@ ngOnInit() {
         }
         return recipes;
       }
-      ) //map
+      )
       .subscribe(
-        (recipes: Recipe[]) => {
-            this.recipeService.setRecipes(recipes)
-        }
+      (recipes: Recipe[]) => {
+        this.recipeService.setRecipes(recipes)
+      }
       );
-
-      }//getrecipe
-
   }
+
+}
 
 

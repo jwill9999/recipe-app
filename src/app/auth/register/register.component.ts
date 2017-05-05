@@ -16,8 +16,8 @@ export class RegisterComponent implements OnInit {
   }
 
     onRegister(data: NgForm) {
-     const email = data.value.email;
-     const password = data.value.password;
+     const email: string = data.value.email;
+     const password: string= data.value.password;
      this.auth.createUser(email, password);
      data.reset();
   }
