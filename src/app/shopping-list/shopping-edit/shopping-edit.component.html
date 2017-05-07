@@ -12,10 +12,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <div id="buttons" class="col-md-12">
           <button [disabled]="!f.valid" type="button" class="btn btn-success" type="submit">{{editMode ? "Update" : "Add"}}</button>
           <button *ngIf="editMode" type="button" class="btn  btn-danger" type="button" (click)="onDelete()">Delete </button>
-          <button type="button" class="btn  btn-primary" type="button" (click)="onClear()">Clear</button>
+          <button type="button" class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
         </div>
       </div>
     </form>

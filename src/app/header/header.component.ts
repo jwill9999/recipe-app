@@ -28,4 +28,9 @@ export class HeaderComponent {
     this.auth.onLogout();
   }
 
+  toggleMenu(){
+    let div = document.querySelector('#toToggle');
+    div.classList.toggle('in');
+  }
+
 }

@@ -1,3 +1,53 @@
 #logout {
   cursor: pointer;
 }
+
+#navigation {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+#nav {
+  width: 80%;
+  margin: auto 0px;
+  border-left: 0px;
+  border-right: 0px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width:3000px) {
+  a.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #nav {
+    margin: auto;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 0px;
+  }
+  #navigation {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #nav {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  a.navbar-brand {
+    font-size: 12px;
+  }
+  #nav {
+    font-size: 11px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+  #navigation {
+    height: 60px;
+  }
+}

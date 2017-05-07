@@ -1,8 +1,9 @@
-<nav class="navbar navbar-default" role="navigation">
+<div id="navigation" class="container-fluid">
+  <nav id="nav" class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="col-md-10 col-md-offset-1 ">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+  <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+    <div  class="navbar-header"  >
+      <button (click)="toggleMenu()"  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" >
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -11,17 +12,16 @@
       <a [routerLink]="['']" class="navbar-brand">Recipe Book</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div id="toToggle" class="collapse navbar-collapse" navbarToggle   >
       <ul class="nav navbar-nav">
         <li [class.hide]="!this.auth.loggedIn" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['recipes']">Recipes</a></li>
         <li [class.hide]="!this.auth.loggedIn" routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-
-        <li routerLinkActive="active"><a [routerLink]="['/login']" [class.hide]="this.auth.loggedIn">Login</a></li>
-        <li [class.hide]="!this.auth.loggedIn"><a>{{this.auth.email}}</a></li>
+        <li id="login" routerLinkActive="active"><a [routerLink]="['/login']" [class.hide]="this.auth.loggedIn">Login</a></li>
+        <li class="hidden-xs" [class.hide]="!this.auth.loggedIn"><a>{{this.auth.email}}</a></li>
         <li id="logout" (click)="onLogout()" [class.hide]="!this.auth.loggedIn"><a routerLinkActive="active">LogOut</a></li>
-        <li [class.hide]="!this.auth.loggedIn" class="dropdown" style="cursor: pointer" appDropdown>
+        <li [class.hide]="!this.auth.loggedIn" class="dropdown" style="cursor: pointer" appDropdown >
           <a class="dropdown-toggle" data-toggle="dropdown">Save Data<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li (click)="onSaveData()"><a>Save Data</a></li>
@@ -33,3 +33,7 @@
   </div>
   <!-- /.navbar-collapse -->
 </nav>
+
+
+</div>
+
