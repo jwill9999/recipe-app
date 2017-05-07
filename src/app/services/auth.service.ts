@@ -7,16 +7,16 @@ import { config } from '../../../.configuration';
 @Injectable()
 export class AuthService {
 
-  private loggedIn: boolean = false;
-  private displayName: string;
-  private email: string;
-  private emailVerified: boolean;
-  private photoURL: string;
-  private isAnonymous: string;
-  private uid: string;
-  private providerData: string;
-  private errorMessage: string;
-  private error: boolean;
+  loggedIn: boolean = false;
+  displayName: string;
+  email: string;
+  emailVerified: boolean;
+  photoURL: string;
+  isAnonymous: string;
+  uid: string;
+  providerData: string;
+  errorMessage: string;
+  error: boolean;
 
   constructor(private router: Router) {
     firebase.initializeApp(config);
