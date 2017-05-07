@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 
 export class LoginComponent {
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(public auth: AuthService, public router: Router) { }
 
 
   onLogin(data: NgForm) {

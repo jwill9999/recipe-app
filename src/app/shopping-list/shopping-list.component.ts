@@ -11,7 +11,7 @@ export class ShoppingListComponent {
 
 
 
-  constructor(private shoppingListService: ShoppinglistService) { }
+  constructor(public shoppingListService: ShoppinglistService) { }
 
   editItem(index: number) {
     this.shoppingListService.startedEditing.next(index);

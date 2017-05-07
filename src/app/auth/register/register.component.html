@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <div [class.hidden]="!this.auth.error" class="alert alert-danger" role="alert">{{this.auth.errorMessage}}</div>
-      <form (ngSubmit)="onLogin(f)" #f="ngForm">
+      <form (ngSubmit)="onRegister(f)" #f="ngForm">
         <legend>Register As New User</legend>
         <div class="form-group">
           <label for="email">Email address</label>

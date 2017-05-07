@@ -9,7 +9,7 @@ export class RecipeService {
   recipesChanged = new Subject<Recipe[]>()
 
 
-  private recipes: Recipe[] = [
+ recipes: Recipe[] = [
     new Recipe(
       'Chinese Chicken',
       'Chinese Chicken with sweet and sour sauce',

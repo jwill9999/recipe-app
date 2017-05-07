@@ -18,7 +18,7 @@ export class AuthService {
   errorMessage: string;
   error: boolean;
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
     firebase.initializeApp(config);
   }
 

@@ -9,7 +9,7 @@ export class DataStorageService {
 
   recipesUrl: string = 'https://recipe-book-c81b8.firebaseio.com/recipes.json'
 
-  constructor(private http: Http, private recipeService: RecipeService) {
+  constructor(public http: Http, public recipeService: RecipeService) {
     this.getRecipes();
   }
 

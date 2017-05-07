@@ -6,6 +6,11 @@
 > cd recipe-app
 > npm install
 > ng serve
+
+To Log In to example project 
+
+> User :      admin@admin.com
+> password:   123456
 ```
 
 ## Project View

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class LogininRouteGuard implements CanActivate {
 
-  constructor(private auth: AuthService) { }
+  constructor(public auth: AuthService) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,

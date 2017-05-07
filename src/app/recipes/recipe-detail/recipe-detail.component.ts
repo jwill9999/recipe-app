@@ -18,7 +18,7 @@ export class RecipeDetailComponent implements OnInit {
   id: number;
   length = this.recipeService.getRecipes().length;
 
-  constructor(public shoppingListService: ShoppinglistService, private route: ActivatedRoute, private recipeService: RecipeService, private auth: AuthService) { }
+  constructor(public shoppingListService: ShoppinglistService, public route: ActivatedRoute, public recipeService: RecipeService, public auth: AuthService) { }
 
   ngOnInit() {
     //listen and get recipe from route params id
