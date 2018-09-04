@@ -15,7 +15,9 @@ To Log In to example project
 > Create a src/app/services/.configuation file 
 > add a FIREBASE AUTHENTICATION config file which you can obtain when you create a firebase app auth account.
 > example code can be found in the configuration.example.ts file
+
 ```
+> [Press here for Firebase Setup documentation]('https://firebase.google.com/docs/web/setup')
 
 ## Project View
 
