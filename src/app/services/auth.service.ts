@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { Observable } from "rxjs/Observable";
-import { config } from '../../../.configuration';
+import { config } from './.configuration';
 
 @Injectable()
 export class AuthService {
