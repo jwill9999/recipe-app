@@ -17,7 +17,7 @@ To Log In to example project
 > example code can be found in the configuration.example.ts file
 
 ```
-> [Press here for Firebase Setup documentation]('https://firebase.google.com/docs/web/setup')
+> [Press here for Firebase Setup documentation ...]('https://firebase.google.com/docs/web/setup')
 
 ## Project View
 
