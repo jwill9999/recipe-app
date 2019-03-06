@@ -1,5 +1,14 @@
 # Angular 4 Application Recipe Book
 
+
+## Project View
+
+<div align="center">
+<img src="./src/assets/images/recipebook.png" />
+</div>
+
+
+
 ```
 
 > git clone https://github.com/jwill9999/recipe-app.git
@@ -17,9 +26,7 @@ To Log In to example project
 > example code can be found in the configuration.example.ts file
 ```
 
-## Project View
 
-![](./src/assets/images/recipebook.png)
 
 
 
